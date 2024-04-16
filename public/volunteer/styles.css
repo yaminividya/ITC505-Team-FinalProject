@@ -1,0 +1,133 @@
+/* styles.css */
+
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply styles to the header */
+header {
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  max-height: 70px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav ul li.selected a {
+  color: #ff6f61;
+  font-weight: bold;
+}
+
+/* Apply styles to the footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-info p,
+.legal-info p {
+  margin-bottom: 10px;
+}
+
+.copyright {
+  text-align: center;
+}
+
+/* Existing styles */
+
+/* Apply styles to the form sections */
+section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+form button,
+form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 1em;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"],
+form textarea {
+  width: 100%;
+}
+
+form button {
+  background-color: #ff6f61;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #e04e42;
+}
+
+#donationMessage {
+  margin-top: 10px;
+  text-align: center;
+  color: #ff6f61;
+  font-size: 1.2em;
+}
+
+/* Apply styles to the image */
+.volunteer-image {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 100%;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>PawsConnect</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../images/PawsConnectLogo.png" alt="PawsConnect Foundation">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../donation/index.html">Donate</a></li>
+          <li><a href="../adopt/index.html">Adopt Pets</a></li>
+          <li><a href="../volunteer/index.html">Volunteer</a></li>
+          <li class="selected"><a href="index.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section>
+    <h1>Signup</h1>
+    <form id="signupForm" action="/signup" method="POST">
+      <input type="text" id="username" name="username" placeholder="Name" required>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+      <input type="password" id="password" name="password" placeholder="Password" required>
+      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+      <button type="submit">Signup</button>
+    </form>
+    <a href="../login/index.html">Login</a>
+    <div id="signupMessage"></div>
+    <script>
+      document.getElementById("signupForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+        
+        // Get form data
+        const formData = new FormData(this);
+        
+        // Convert form data to JSON
+        const jsonData = {};
+        formData.forEach((value, key) => {
+          jsonData[key] = value;
+        });
+    
+        // Send form data to the server
+        fetch("/signup", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(jsonData)
+        })
+        .then(response => {
+          if (response.ok) {
+            // Clear the form
+            document.getElementById("signupForm").reset();
+            
+            // Show success message in green color
+            document.getElementById("signupMessage").innerText = "Signup successful. Please login now.";
+            document.getElementById("signupMessage").style.color = "green"; // Set color to green
+            document.getElementById("signupMessage").style.fontSize = "30px";
+          } else {
+            throw new Error("Signup failed.");
+          }
+        })
+        .catch(error => {
+          console.error("Error:", error);
+          // Show error message in red color
+          document.getElementById("signupMessage").innerText = "Signup failed. Please try again later.";
+          document.getElementById("signupMessage").style.color = "red"; // Set color to red
+        });
+      });
+    </script>
+    
+    
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="contact-info">
+        <p>(928) 221-1234</p>
+        <p>info@barxparxfoundation.org</p>
+      </div>
+      <div class="legal-info">
+        <p>Paws Connect Pet Adoption Platform</p>
+        <p>pawsconnect@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

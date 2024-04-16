@@ -1,0 +1,432 @@
+/* styles.css */
+
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply styles to the header */
+header {
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  max-height: 70px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav ul li.selected a {
+  color: #ff6f61;
+  font-weight: bold;
+}
+
+/* Apply styles to the carousel */
+.hero-section {
+  margin-top: 20px;
+}
+
+.carousel-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slide {
+  display: flex;
+  width: 300%; /* Adjusted width for three images */
+  transition: transform 0.5s ease; /* Smooth transition */
+  transform: translateX(0); /* Start with the first image */
+}
+
+.carousel-slide img {
+  width: 100%; /* Ensure each image fills the container width */
+  height: 100%; /* Allow the height to adjust according to the aspect ratio */
+  max-width: 100%; /* Ensure the image does not exceed the container width */
+  max-height: 100%; /* Ensure the image does not exceed the container height */
+  object-fit: cover; /* Handle different aspect ratios while maintaining the image's aspect ratio */
+}
+
+
+.carousel-arrows {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #ff6f61; /* Change the color of the active dot */
+}
+
+/* Additional CSS styles for new sections */
+
+.action_section {
+  padding: 40px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.action_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card img {
+  width: 50px; /* Adjust the width as per your preference */
+  height: 50px; /* Adjust the height as per your preference */
+  border-radius: 5px;
+}
+
+.card h3 {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #ff6f61;
+}
+
+.card p {
+  margin-top: 15px;
+  color: #666;
+}
+
+.action-button {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.action-button:hover {
+  background-color: purple;
+  color: white;
+}
+
+.about-section {
+  background-color: white;
+  color: black;
+  padding: 30px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Align items horizontally */
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.info_icon {
+  margin-bottom: 20px;
+}
+
+.icon-image {
+  width: 50px; /* Set the width of the image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.about-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #ff6f61;
+}
+
+.about-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.about-button:hover {
+  background-color: purple;
+  color: white;
+}
+
+.agree-section {
+  margin-top: 40px; /* Add margin to the top */
+}
+
+.agree-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center; /* Center align the content */
+}
+
+.agree-section h2 {
+  font-size: 36px;
+  color: #ff6f61;
+  margin-bottom: 20px;
+}
+
+.agree-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: black; /* Change text color to black */
+  margin-bottom: 30px;
+}
+
+.subscribe-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.subscribe-form input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.subscribe-form button {
+  width: 100%;
+  padding: 15px;
+  background-color: #ff6f61;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.subscribe-form button:hover {
+  background-color: purple;
+}
+
+/* Additional CSS styles for the mission section */
+
+.mission-section {
+  padding: 40px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.mission-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.mission-image {
+  flex: 1;
+  margin-right: 20px; /* Add margin between the grids */
+}
+
+.mission-content {
+  flex: 2;
+  text-align: left; /* Align content to the left */
+}
+
+.mission-content h2 {
+  font-size: 36px;
+  color: #ff6f61;
+  margin-bottom: 20px;
+}
+
+.mission-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* CSS for positioning the Related Articles heading */
+.related-articles-heading {
+  text-align: center;
+  margin-bottom: 20px; 
+  font-size: 36px;
+  color: #ff6f61;
+}
+
+/* CSS for the grid container */
+.article-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* CSS for individual article */
+.article {
+  width: calc(33.33% - 20px); /* Adjust width and margin as needed */
+  margin-bottom: 20px; /* Adjust margin as needed */
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* CSS for article image */
+.article img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* CSS for article heading */
+.article h3 {
+  margin-top: 10px; /* Adjust margin as needed */
+  color: purple;
+}
+
+/* CSS for article description */
+.article p {
+  margin: 20px; /* Adjust margin as needed */
+  color: black;
+}
+
+
+/* Update footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 120px;
+  margin-top: 20px;
+  /* position: fixed; */
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /* Allow flexibility in wrapping */
+  justify-content: space-between; /* Ensure space between elements */
+  align-items: center; /* Center align items vertically */
+}
+
+.contact-info p,
+.legal-info p {
+  margin-bottom: 10px;
+  font-size: 18px; /* Increase font size for better readability */
+}
+
+.copyright {
+  text-align: center;
+  font-size: 16px; /* Decrease font size slightly */
+}
+
+/* Style the links in the footer */
+.footer-container a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.footer-container a:hover {
+  color: #ff6f61; /* Change color on hover */
+}
+
+/* Media queries for responsiveness */
+@media only screen and (min-width: 768px) {
+  /* Apply styles for screens wider than 768px */
+  .card {
+    width: calc(33.33% - 40px); /* Adjust card width for medium screens */
+  }
+
+  /* Adjust image size for medium screens */
+  .card img {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Adjust carousel image size for medium screens */
+  .carousel-slide img {
+    height: 350px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  /* Apply styles for screens wider than 992px */
+  .container {
+    padding: 0 40px; /* Increase container padding for larger screens */
+  }
+
+  /* Adjust image size for large screens */
+  .card img {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* Adjust carousel image size for large screens */
+  .carousel-slide img {
+    height: 450px;
+  }
+}

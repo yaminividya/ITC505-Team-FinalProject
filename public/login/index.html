@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>PawsConnect</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../images/PawsConnectLogo.png" alt="PawsConnect Foundation">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../donation/index.html">Donate</a></li>
+          <li><a href="../adopt/index.html">Adopt Pets</a></li>
+          <li><a href="../volunteer/index.html">Volunteer</a></li>
+          <li class="selected"><a id="loginLink" href="index.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section>
+    <h1>Login</h1>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <a href="../signup/index.html">Signup</a>
+    <div id="loginMessage"></div>
+    <script>
+      document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+    
+        // Get form data
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+    
+        // Submit form data to the server for authentication
+        fetch('/login', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email: email, password: password })
+          })
+          .then(response => {
+            if (response.ok) {
+              // Redirect to home page after successful login
+              window.location.href = '../index.html';
+              // Change login link text to "Signout"
+              document.getElementById("loginLink").textContent = "Signout";
+            } else if (response.status === 401) {
+              // Display error message on invalid credentials
+              document.getElementById("loginMessage").textContent = "Invalid email or password.";
+              document.getElementById("loginMessage").style.color = "red";
+            } else {
+              // Display generic error message on server error
+              document.getElementById("loginMessage").textContent = "An error occurred. Please try again later.";
+              document.getElementById("loginMessage").style.color = "red";
+            }
+          })
+          .catch(error => {
+            console.error('Error logging in:', error);
+            // Display error message on fetch error
+            document.getElementById("loginMessage").textContent = "An error occurred. Please try again later.";
+            document.getElementById("loginMessage").style.color = "red";
+          });
+      });
+    </script>
+    
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="contact-info">
+        <p>(928) 221-1234</p>
+        <p>info@barxparxfoundation.org</p>
+      </div>
+      <div class="legal-info">
+        <p>Paws Connect Pet Adoption Platform</p>
+        <p>pawsconnect@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

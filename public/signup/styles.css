@@ -1,0 +1,138 @@
+/* styles.css */
+
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Apply styles to the header */
+  header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo img {
+    max-height: 70px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  nav ul li.selected a {
+    color: #ff6f61;
+    font-weight: bold;
+  }
+  
+  /* Apply styles to the footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 20px;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .contact-info p,
+  .legal-info p {
+    margin-bottom: 10px;
+  }
+  
+  .copyright {
+    text-align: center;
+  }
+
+/* Apply styles to the signup form section */
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+  
+section h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+  
+#signupForm {
+    display: flex;
+    flex-direction: column;
+}
+  
+#signupForm input,
+#signupForm button {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1em;
+}
+  
+#signupForm input[type="text"],
+#signupForm input[type="email"],
+#signupForm input[type="password"] {
+    width: 100%;
+}
+  
+#signupForm button {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+  
+#signupForm button:hover {
+    background-color: #e04e42;
+}
+  
+#signupMessage {
+    margin-top: 10px;
+    text-align: center;
+    color: #ff6f61;
+}
+
+/* Apply styles to the signup link */
+section a {
+    display: block;
+    text-align: center;
+    color: #ff6f61;
+    text-decoration: underline; /* Add underline */
+    font-size: 1.4em; /* Increase font size */
+    margin-top: 10px; /* Adjust spacing */
+}
+  
+section a:hover {
+    color: #ff6f61; /* Change color on hover */
+    text-decoration: none; /* Remove underline on hover */
+}

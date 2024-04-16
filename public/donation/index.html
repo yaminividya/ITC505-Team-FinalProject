@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>PawsConnect</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../images/PawsConnectLogo.png" alt="PawsConnect Foundation">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li class="selected"><a href="../donation/index.html">Donate</a></li>
+          <li><a href="../adopt/index.html">Adopt Pets</a></li>
+          <li><a href="../volunteer/index.html">Volunteer</a></li>
+          <li><a href="../login/index.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section>
+    <img src="../images/Donation.jpeg" alt="Donation Image" class="donation-image">
+    <h1>Donation</h1>
+    <form id="donationForm" onsubmit="return validateDonationForm(event)">
+      <input type="text" id="fullName" placeholder="Full Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="tel" id="phone" placeholder="Mobile Number" required>
+      <input type="number" id="amount" placeholder="Donation Amount" required>
+      <!-- Additional fields for credit/debit card information -->
+      <input type="text" id="cardNumber" placeholder="Card Number" required>
+      <input type="text" id="expiryMonth" placeholder="Expiry Month (MM)" required>
+      <input type="text" id="expiryYear" placeholder="Expiry Year (YY)" required>
+      <input type="text" id="cvv" placeholder="CVV" required>
+      <!-- Button to make payment -->
+      <button type="submit">Make Payment</button>
+    </form>
+    <div id="donationMessage"></div>
+    <!-- <div id="successMessage" style="display: none;">
+      <p>Transaction Successful. Thank you for your contribution!</p>
+    </div> -->
+    <script src="script.js"></script>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="contact-info">
+        <p>(928) 221-1234</p>
+        <p>info@barxparxfoundation.org</p>
+      </div>
+      <div class="legal-info">
+        <p>Paws Connect Pet Adoption Platform</p>
+        <p>pawsconnect@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

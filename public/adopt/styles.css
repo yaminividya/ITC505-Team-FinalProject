@@ -1,0 +1,258 @@
+/* styles.css for Adopt Pets page */
+
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply styles to the header */
+header {
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  max-height: 70px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav ul li.selected a {
+  color: #ff6f61;
+  font-weight: bold;
+}
+
+/* Apply styles to the footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-info p,
+.legal-info p {
+  margin-bottom: 10px;
+}
+
+/* Apply styles to the pet listings */
+#pet-listings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.pet-listing {
+  width: calc(30% - 20px);
+  margin-bottom: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.pet-listing img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.pet-listing p {
+  font-size: 20px;
+  color: #333;
+}
+
+/* Apply styles to the filter options */
+#filter-options {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#filter-options label {
+  margin-right: 10px;
+}
+
+/* Apply styles to the select container */
+.select-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Apply styles to the select element */
+#filter-options select {
+  height: 40px; /* Adjust the height as needed */
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  width: 200px; /* Adjust the width as needed */
+  cursor: pointer;
+}
+
+#filter-options select::-ms-expand {
+  display: none;
+}
+
+#filter-options select::-webkit-scrollbar {
+  width: 8px;
+}
+
+#filter-options select::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+/* Create the arrow */
+.select-arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 6px 6px 0 6px;
+  border-color: #666 transparent transparent transparent;
+}
+
+/* Apply hover effect */
+#filter-options select:hover {
+  border-color: #999;
+}
+
+/* Apply focus effect */
+#filter-options select:focus {
+  border-color: #666;
+  outline: none;
+}
+
+/* Apply styles to the adopt button */
+.adopt-button {
+  background-color: #ff6f61;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1em;
+}
+
+.adopt-button:hover {
+  background-color: #49274b;
+}
+
+/* Apply styles to the adopt button */
+#filter-button {
+  background-color: #ff6f61;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1em;
+}
+
+#filter-button:hover {
+  background-color: #49274b;
+}
+
+.pet-details {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.pet-details img {
+  width: 100%;
+}
+
+/* Apply styles to the search container */
+#search-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Apply styles to the search input */
+#search-input {
+  height: 40px;
+  flex: 0.1; /* Adjusted to decrease width a bit more */
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+/* Apply styles to the search button */
+#search-button {
+  background-color: #ff6f61;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1em;
+}
+
+#search-button:hover {
+  background-color: #49274b;
+}
+
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .pet-listing {
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .pet-listing {
+    width: 100%;
+  }
+}

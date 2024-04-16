@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>PawsConnect</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../images/PawsConnectLogo.png" alt="PawsConnect Foundation">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../donation/index.html">Donate</a></li>
+          <li class="selected"><a href="index.html">Adopt Pets</a></li>
+          <li><a href="../volunteer/index.html">Volunteer</a></li>
+          <li><a href="../login/index.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="AdoptPage">
+  <main id="pet-listings" style="margin-top: 20px;"> <!-- Added margin-top -->
+    <!-- Pet listings and filter options remain unchanged -->
+  </main>
+
+  <!-- <div id="search-filter-container"> -->
+    <div id="filter-options">
+      <label for="breed-filter">Breed:</label>
+      <div class="select-container">
+        <select id="breed-filter">
+          <option value="all">All</option>
+          <option value="Beagle">Beagle</option>
+          <option value="Bulldog">Bulldog</option>
+          <option value="Chihuahua">Chihuahua</option>
+          <option value="Chow Chow">Chow Chow</option>
+          <option value="Corgi">Corgi</option>
+          <option value="Doberman">Doberman</option>
+          <option value="German Shepherd">German Shepherd</option>
+          <option value="Golden Doodle">Golden Doodle</option>
+          <option value="Golden-Retriever">Golden Retriever</option>
+          <option value="Labrador-Retriever">Labrador Retriever</option>
+          <option value="Maltese">Maltese</option>
+          <option value="Maltipoo">Maltipoo</option>
+          <option value="Pomeranian">Pomeranian</option>
+          <option value="Poodle">Poodle</option>
+          <option value="Samoyed">Samoyed</option>
+          <option value="Sheltie">Sheltie</option>
+          <option value="Shih Tzu">Shih Tzu</option>
+          <option value="Havanese">Havanese</option>
+        </select>
+        <div class="select-arrow"></div>
+      </div>
+
+
+      <label for="gender-filter">Gender:</label>
+      <div class="select-container">
+        <select id="gender-filter">
+          <option value="all">All</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <div class="select-arrow"></div>
+      </div>
+
+      <button id="filter-button">Filter</button>
+      <div id="search-container">
+        <input type="text" id="search-input" placeholder="Enter Pet Breed to search">
+        <button id="search-button">Search</button>
+      </div>
+
+    </div>
+  <!-- </div> -->
+
+  <main id="pet-listings">
+    <!-- Pet listings remain unchanged with added inline styles -->
+    <div class="pet-listing" data-breed="Beagle" data-age="less-than-1-year" data-size="small" data-gender="male">
+      <h2>Beagle</h2>
+      <div class="pet-details">
+        <img src="../images/Beagle.webp" alt="Beagle" style="width: 300px; height: 200px;"> <!-- Added inline styles -->
+        <p><strong>Breed:</strong> Beagle</p>
+        <p><strong>Age:</strong> Less than 1 year</p>
+        <p><strong>Size:</strong> Small</p>
+        <p><strong>Gender:</strong> Male</p>
+        <button class="adopt-button">Adopt Me</button>
+      </div>
+    </div>
+
+    <div class="pet-listing" data-breed="Bulldog" data-age="less-than-5-years" data-size="medium" data-gender="female">
+      <h2>Bulldog</h2>
+      <div class="pet-details">
+        <img src="../images/bulldog.jpg" alt="Bulldog" style="width: 300px; height: 200px;">
+        <p><strong>Breed:</strong> Bulldog</p>
+        <p><strong>Age:</strong> Less than 5 years</p>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Gender:</strong> Female</p>
+        <button class="adopt-button">Adopt Me</button>
+      </div>
+    </div>
+
+    <div class="pet-listing" data-breed="Chihuahua" data-age="less-than-5-years" data-size="medium" data-gender="male">
+      <h2>Chihuahua</h2>
+      <div class="pet-details">
+        <img src="../images/Chihuahua.webp" alt="Chihuahua" style="width: 300px; height: 200px;">
+        <p><strong>Breed:</strong> Chihuahua</p>
+        <p><strong>Age:</strong> Less than 5 years</p>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Gender:</strong> Male</p>
+        <button class="adopt-button">Adopt Me</button>
+      </div>
+    </div>
+
+    <div class="pet-listing" data-breed="Chow Chow" data-age="less-than-1-year" data-size="medium" data-gender="female">
+      <h2>Chow Chow</h2>
+      <div class="pet-details">
+        <img src="../images/Chow Chow.jpg" alt="Chow Chow" style="width: 300px; height: 200px;">
+        <p><strong>Breed:</strong> Chow Chow</p>
+        <p><strong>Age:</strong> Less than 1 year</p>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Gender:</strong> Female</p>
+        <button class="adopt-button">Adopt Me</button>
+      </div>
+    </div>
+
+    <div class="pet-listing" data-breed="Corgi" data-age="less-than-5-years" data-size="medium" data-gender="female">
+      <h2>Corgi</h2>
+      <div class="pet-details">
+        <img src="../images/corgi.webp" alt="Corgi" style="width: 300px; height: 200px;">
+        <p><strong>Breed:</strong> Corgi</p>
+        <p><strong>Age:</strong> Less than 5 years</p>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Gender:</strong> Female</p>
+        <button class="adopt-button">Adopt Me</button>
+      </div>
+    </div>
+
+    <div class="pet-listing" data-breed="Doberman" data-age="less-than-1-year" data-size="small" data-gender="female">
+      <h2>Doberman</h2>
+      <div class="pet-details">
+        <img src="../images/doberman.jpg" alt="Doberman" style="width: 300px; height: 200px;">
+        <p><strong>Breed:</strong> Doberman</p>
+        <p><strong>Age:</strong> Less than 1 year</p>
+        <p><strong>Size:</strong> Small</p>
+        <p><strong>Gender:</strong> Female</p>
+        <button class="adopt-button">Adopt Me</button>
+      </div>
+    </div>
+
+    <div class="pet-listing" data-breed="German Shepherd" data-age="less-than-1-year" data-size="medium"
+      data-gender="male">
+      <h2>German Shepherd</h2>
+      <div class="pet-details">
+        <img src="../images/german shepherd.jpg" alt="German Shepherd" style="width: 300px; height: 200px;">
+        <p><strong>Breed:</strong> German Shepherd</p>
+        <p><strong>Age:</strong> Less than 1 year</p>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Gender:</strong> Male</p>
+        <button class="adopt-button">Adopt Me</button>
+      </div>
+    </div>
+
+    <div class="pet-listing" data-breed="Golden Doodle" data-age="less-than-1-year" data-size="small"
+      data-gender="male">
+      <h2>Golden Doodle</h2>
+      <div class="pet-details">
+        <img src="../images/golden doodle.webp" alt="Golden Doodle" style="width: 300px; height: 200px;">
+        <p><strong>Breed:</strong> Golden Doodle</p>
+        <p><strong>Age:</strong> Less than 1 year</p>
+        <p><strong>Size:</strong> Small</p>
+        <p><strong>Gender:</strong> Male</p>
+        <button class="adopt-button">Adopt Me</button>
+      </div>
+    </div>
+
+    <div class="pet-listing" data-breed="Golden Retriever" data-age="less-than-1-year" data-size="small"
+      data-gender="male">
+      <h2>Golden Retriever</h2>
+      <div class="pet-details">
+        <img src="../images/golden retriever.jpeg" alt="Golden Retriever" style="width: 300px; height: 200px;">
+        <p><strong>Breed:</strong> Golden Retriever</p>
+        <p><strong>Age:</strong> Less than 1 year</p>
+        <p><strong>Size:</strong> Small</p>
+        <p><strong>Gender:</strong> Male</p>
+        <button class="adopt-button">Adopt Me</button>
+      </div>
+    </div>
+
+    <div class="pet-listing" data-breed="Labrador Retriever" data-age="less-than-5-years" data-size="medium"
+      data-gender="male">
+      <h2>Labrador Retriever</h2>
+      <div class="pet-details">
+        <img src="../images/Labrador Retriever.jpg" alt="Labrador Retriever" style="width: 300px; height: 200px;">
+        <p><strong>Breed:</strong> Labrador Retriever</p>
+        <p><strong>Age:</strong> Less than 5 years</p>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Gender:</strong> Male</p>
+        <button class="adopt-button">Adopt Me</button>
+      </div>
+    </div>
+
+    <div class="pet-listing" data-breed="Maltese" data-age="less-than-5-years" data-size="medium" data-gender="male">
+      <h2>Maltese</h2>
+      <div class="pet-details">
+        <img src="../images/Maltese.jpg" alt="Maltese" style="width: 300px; height: 200px;">
+        <p><strong>Breed:</strong> Maltese</p>
+        <p><strong>Age:</strong> Less than 5 years</p>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Gender:</strong> Male</p>
+        <button class="adopt-button">Adopt Me</button>
+      </div>
+    </div>
+
+    <div class="pet-listing" data-breed="Maltipoo" data-age="less-than-5-years" data-size="medium" data-gender="male">
+      <h2>Maltipoo</h2>
+      <div class="pet-details">
+        <img src="../images/maltipoo.jpg" alt="Maltipoo" style="width: 300px; height: 200px;">
+        <p><strong>Breed:</strong> Maltipoo</p>
+        <p><strong>Age:</strong> Less than 5 years</p>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Gender:</strong> Male</p>
+        <button class="adopt-button">Adopt Me</button>
+      </div>
+    </div>
+
+    <div class="pet-listing" data-breed="Pomeranian" data-age="less-than-5-years" data-size="medium"
+      data-gender="female">
+      <h2>Pomeranian</h2>
+      <div class="pet-details">
+        <img src="../images/Pomeranian.jpg" alt="Pomeranian" style="width: 300px; height: 200px;">
+        <p><strong>Breed:</strong> Pomeranian</p>
+        <p><strong>Age:</strong> Less than 5 years</p>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Gender:</strong> Female</p>
+        <button class="adopt-button">Adopt Me</button>
+      </div>
+    </div>
+
+    <div class="pet-listing" data-breed="Poodle" data-age="less-than-1-year" data-size="new born" data-gender="male">
+      <h2>Poodle</h2>
+      <div class="pet-details">
+        <img src="../images/Poodle.jpg" alt="Poodle" style="width: 300px; height: 200px;">
+        <p><strong>Breed:</strong> Poodle</p>
+        <p><strong>Age:</strong> Less than 1 year</p>
+        <p><strong>Size:</strong> New Born</p>
+        <p><strong>Gender:</strong> Male</p>
+        <button class="adopt-button">Adopt Me</button>
+      </div>
+    </div>
+
+    <div class="pet-listing" data-breed="Samoyed" data-age="less-than-5-years" data-size="medium" data-gender="female">
+      <h2>Samoyed</h2>
+      <div class="pet-details">
+        <img src="../images/samoyed.jpg" alt="Samoyed" style="width: 300px; height: 200px;">
+        <p><strong>Breed:</strong> Samoyed</p>
+        <p><strong>Age:</strong> Less than 5 years</p>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Gender:</strong> Female</p>
+        <button class="adopt-button">Adopt Me</button>
+      </div>
+    </div>
+
+    <div class="pet-listing" data-breed="Sheltie" data-age="less-than-1-year" data-size="new born" data-gender="female">
+      <h2>Sheltie</h2>
+      <div class="pet-details">
+        <img src="../images/sheltie.jpg" alt="Sheltie" style="width: 300px; height: 200px;">
+        <p><strong>Breed:</strong> Sheltie</p>
+        <p><strong>Age:</strong> Less than 1 year</p>
+        <p><strong>Size:</strong> New Born</p>
+        <p><strong>Gender:</strong> Female</p>
+        <button class="adopt-button">Adopt Me</button>
+      </div>
+    </div>
+
+    <div class="pet-listing" data-breed="Shih Tzu" data-age="less-than-1-year" data-size="small" data-gender="male">
+      <h2>Shih Tzu</h2>
+      <div class="pet-details">
+        <img src="../images/shih tzu.webp" alt="Shih Tzu" style="width: 300px; height: 200px;">
+        <p><strong>Breed:</strong> Shih Tzu</p>
+        <p><strong>Age:</strong> Less than 1 year</p>
+        <p><strong>Size:</strong> Small</p>
+        <p><strong>Gender:</strong> Male</p>
+        <button class="adopt-button">Adopt Me</button>
+      </div>
+    </div>
+
+    <div class="pet-listing" data-breed="Havanese" data-age="less-than-5-years" data-size="medium" data-gender="male">
+      <h2>Havanese</h2>
+      <div class="pet-details">
+        <img src="../images/Havanese.jpg" alt="Havanese" style="width: 300px; height: 200px;">
+        <p><strong>Breed:</strong> Havanese</p>
+        <p><strong>Age:</strong> Less than 5 years</p>
+        <p><strong>Size:</strong> Medium</p>
+        <p><strong>Gender:</strong> Male</p>
+        <button class="adopt-button">Adopt Me</button>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterButton = document.getElementById("filter-button");
+    const searchButton = document.getElementById("search-button");
+    const searchInput = document.getElementById("search-input");
+
+    filterButton.addEventListener("click", function () {
+      filterListings();
+    });
+
+    searchButton.addEventListener("click", function () {
+      searchListings();
+    });
+
+    searchInput.addEventListener("input", function () {
+      if (searchInput.value.trim() === "") {
+        // If search input is empty, show all pet listings
+        showAllListings();
+      }
+    });
+
+    function filterListings() {
+      const breedFilter = document.getElementById("breed-filter").value;
+      const genderFilter = document.getElementById("gender-filter").value;
+
+      const petListings = document.querySelectorAll(".pet-listing");
+
+      petListings.forEach(function (listing) {
+        const breed = listing.getAttribute("data-breed");
+        const gender = listing.getAttribute("data-gender");
+
+        if (
+          (breedFilter === "all" || breedFilter === breed) &&
+          (genderFilter === "all" || genderFilter === gender)
+        ) {
+          listing.style.display = "block";
+        } else {
+          listing.style.display = "none";
+        }
+      });
+    }
+
+    function searchListings() {
+      const searchQuery = searchInput.value.trim().toLowerCase();
+      const petListings = document.querySelectorAll(".pet-listing");
+
+      petListings.forEach(function (listing) {
+        const breed = listing.getAttribute("data-breed").toLowerCase();
+
+        if (breed.includes(searchQuery)) {
+          listing.style.display = "block";
+        } else {
+          listing.style.display = "none";
+        }
+      });
+    }
+
+    function showAllListings() {
+      const petListings = document.querySelectorAll(".pet-listing");
+
+      petListings.forEach(function (listing) {
+        listing.style.display = "block";
+      });
+    }
+
+    // Add event listener to all "Adopt Me" buttons
+    const adoptButtons = document.querySelectorAll('.adopt-button');
+    adoptButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        // Redirect to adopted successfully page
+        window.location.href = "adopted-successfully.html";
+      });
+    });
+  });
+</script>
+
+  
+
+
+  <footer>
+    <div class="footer-container">
+      <div class="contact-info">
+        <p>(928) 221-1234</p>
+        <p>info@barxparxfoundation.org</p>
+      </div>
+      <div class="legal-info">
+        <p>Paws Connect Pet Adoption Platform</p>
+        <p>pawsconnect@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>
