@@ -199,3 +199,10 @@ form button:hover {
 .modal-content button:hover {
   background-color: #e04e42;
 }
+
+#volunteerMessage {
+  margin-top: 10px;
+  text-align: center;
+  color: #ff6f61;
+  font-size: 1.2em;
+}

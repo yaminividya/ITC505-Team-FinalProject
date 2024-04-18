@@ -1,13 +1,27 @@
 function validateForm() {
-  var firstName = document.getElementById("firstName").value;
-  var lastName = document.getElementById("lastName").value;
-  var email = document.getElementById("email").value;
-  var phone = document.getElementById("phone").value;
+  var firstName = document.getElementById("firstName").value.trim();
+  var lastName = document.getElementById("lastName").value.trim();
+  var email = document.getElementById("email").value.trim();
+  var phone = document.getElementById("phone").value.trim();
 
   // Simple validation for demonstration purpose
-  if (firstName == "" || lastName == "" || email == "" || phone == "") {
-      alert("Please fill in all fields");
-      return false;
+  if (firstName === "" || lastName === "" || email === "" || phone === "") {
+    document.getElementById("volunteerMessage").innerHTML = "Please fill in all fields";
+    return false;
+  }
+
+  // Validate email format
+  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    document.getElementById("volunteerMessage").innerHTML = "Please enter a valid email address";
+    return false;
+  }
+
+  // Validate phone number format
+  var phonePattern = /^\d{10}$/;
+  if (!phonePattern.test(phone)) {
+    document.getElementById("volunteerMessage").innerHTML = "Please enter a valid 10-digit phone number";
+    return false;
   }
 
   // Display success message in the modal
@@ -18,9 +32,11 @@ function validateForm() {
 
   // Clear form fields after successful submission (optional)
   document.getElementById("volunteerForm").reset();
+  document.getElementById("volunteerMessage").innerHTML = "";
 
   return false; // Prevent form submission for demonstration purpose
 }
+
 
 // Close the modal when the user clicks on the close button
 var closeBtn = document.getElementsByClassName("close")[0];

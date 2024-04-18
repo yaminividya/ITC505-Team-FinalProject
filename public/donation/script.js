@@ -101,6 +101,7 @@ function validateDonationForm(event) {
   document.getElementById("expiryMonth").value = "";
   document.getElementById("expiryYear").value = "";
   document.getElementById("cvv").value = "";
+  document.getElementById("donationMessage").innerHTML = "";
 
   return true;
 }
