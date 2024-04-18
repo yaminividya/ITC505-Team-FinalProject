@@ -308,78 +308,55 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const filterButton = document.getElementById("filter-button");
-    const searchButton = document.getElementById("search-button");
-    const searchInput = document.getElementById("search-input");
+  const filterButton = document.getElementById("filter-button");
+  const searchButton = document.getElementById("search-button");
+  const searchInput = document.getElementById("search-input");
 
-    filterButton.addEventListener("click", function () {
-      filterListings();
-    });
+  filterButton.addEventListener("click", function () {
+    filterAndSearchListings();
+  });
 
-    searchButton.addEventListener("click", function () {
-      searchListings();
-    });
+  searchButton.addEventListener("click", function () {
+    filterAndSearchListings();
+  });
 
-    searchInput.addEventListener("input", function () {
-      if (searchInput.value.trim() === "") {
-        // If search input is empty, show all pet listings
-        showAllListings();
+  searchInput.addEventListener("input", function () {
+    filterAndSearchListings();
+  });
+
+  function filterAndSearchListings() {
+    const breedFilter = document.getElementById("breed-filter").value.toLowerCase();
+    const genderFilter = document.getElementById("gender-filter").value.toLowerCase();
+    const searchQuery = searchInput.value.trim().toLowerCase();
+
+    const petListings = document.querySelectorAll(".pet-listing");
+
+    petListings.forEach(function (listing) {
+      const breed = listing.getAttribute("data-breed").toLowerCase();
+      const gender = listing.getAttribute("data-gender").toLowerCase();
+
+      const breedMatch = breedFilter === "all" || breed === breedFilter;
+      const genderMatch = genderFilter === "all" || gender === genderFilter;
+      const searchMatch = searchQuery === "" || breed.includes(searchQuery);
+
+      if (breedMatch && genderMatch && searchMatch) {
+        listing.style.display = "block";
+      } else {
+        listing.style.display = "none";
       }
     });
+  }
 
-    function filterListings() {
-      const breedFilter = document.getElementById("breed-filter").value;
-      const genderFilter = document.getElementById("gender-filter").value;
-
-      const petListings = document.querySelectorAll(".pet-listing");
-
-      petListings.forEach(function (listing) {
-        const breed = listing.getAttribute("data-breed");
-        const gender = listing.getAttribute("data-gender");
-
-        if (
-          (breedFilter === "all" || breedFilter === breed) &&
-          (genderFilter === "all" || genderFilter === gender)
-        ) {
-          listing.style.display = "block";
-        } else {
-          listing.style.display = "none";
-        }
-      });
-    }
-
-    function searchListings() {
-      const searchQuery = searchInput.value.trim().toLowerCase();
-      const petListings = document.querySelectorAll(".pet-listing");
-
-      petListings.forEach(function (listing) {
-        const breed = listing.getAttribute("data-breed").toLowerCase();
-
-        if (breed.includes(searchQuery)) {
-          listing.style.display = "block";
-        } else {
-          listing.style.display = "none";
-        }
-      });
-    }
-
-    function showAllListings() {
-      const petListings = document.querySelectorAll(".pet-listing");
-
-      petListings.forEach(function (listing) {
-        listing.style.display = "block";
-      });
-    }
-
-    // Add event listener to all "Adopt Me" buttons
-    const adoptButtons = document.querySelectorAll('.adopt-button');
-    adoptButtons.forEach(function (button) {
-      button.addEventListener('click', function () {
-        // Redirect to adopted successfully page
-        window.location.href = "adopted-successfully.html";
-      });
+  // Add event listener to all "Adopt Me" buttons
+  const adoptButtons = document.querySelectorAll('.adopt-button');
+  adoptButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      // Redirect to adopted successfully page
+      window.location.href = "adopted-successfully.html";
     });
   });
+});
+
 </script>
 
   
