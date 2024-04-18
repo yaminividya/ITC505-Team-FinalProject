@@ -1,3 +1,25 @@
+// Function to show the modal
+function showModal(message) {
+  var modal = document.getElementById("myModal");
+  var modalMessage = document.getElementById("modalMessage");
+  modalMessage.innerHTML = message;
+  modal.style.display = "block";
+}
+
+// Function to hide the modal
+function hideModal() {
+  var modal = document.getElementById("myModal");
+  modal.style.display = "none";
+}
+
+// Close the modal when the user clicks on the close button
+var closeBtn = document.getElementsByClassName("close")[0];
+closeBtn.onclick = hideModal;
+
+// Handle click event for the OK button in the modal
+var okButton = document.getElementById("okButton");
+okButton.onclick = hideModal;
+
 function validateDonationForm(event) {
   event.preventDefault(); // Prevent default form submission behavior
   
@@ -66,14 +88,9 @@ function validateDonationForm(event) {
   }
 
   // If all validations pass, show success message, clear form, and return true
-  document.getElementById("donationMessage").innerHTML = ""; // Clear error message
-  var messageDiv = document.getElementById("donationMessage");
-  messageDiv.innerHTML = "Transaction Successful. Thank you for your contribution!";
-  messageDiv.style.color = "#00b300"; // Green color for success message
-  messageDiv.style.textAlign = "center";
-  messageDiv.style.fontSize = "20px";
-  messageDiv.style.display = "block";
-  messageDiv.style.fontSize = "30px";
+  var successMessage = "Transaction Successful. Thank you for your contribution and Have a good day! :)";
+  showModal(successMessage);
+
 
   // Clear form input values
   document.getElementById("fullName").value = "";

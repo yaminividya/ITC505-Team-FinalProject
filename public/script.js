@@ -85,7 +85,7 @@ subscribeBtn.addEventListener('click', function(event) {
   
   if (isValidEmail(email)) {
     // Email is valid, show success message
-    successMessage.textContent = 'Thanks for subscribing!';
+    successMessage.textContent = 'You\'re now subscribed! You\'ll receive newsletter updates from now on.';
     successMessage.style.color = 'green';
     successMessage.style.display = 'block';
     
