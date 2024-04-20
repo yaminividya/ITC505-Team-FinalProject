@@ -42,6 +42,15 @@
     <script>
       document.getElementById("signupForm").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent default form submission
+
+        // Validate password and confirm password
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
+        if (password !== confirmPassword) {
+          document.getElementById("signupMessage").innerText = "Password and Confirm Password must match.";
+          document.getElementById("signupMessage").style.color = "red"; // Set color to red
+          return; // Prevent form submission
+        }
         
         // Get form data
         const formData = new FormData(this);
